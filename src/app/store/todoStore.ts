@@ -8,6 +8,7 @@ interface Todo {
 interface TodoState{
   todos : Todo[];
   addTodo: (text: string)=> void;
+  updateTodo: (id:number, text:string)=>void;
   deleteTodo: (id: number)=>void;
 
 }
@@ -25,6 +26,14 @@ const useTodoStore = create<TodoState>((set) => ({
     set((state) => ({
       todos: state.todos.filter((todo) => todo.id !== id),
     })),
+
+
+  updateTodo: (id, text: string) =>
+      set((state) => ({
+        todos: state.todos.map((user)=>
+        user.id===id ? {...user, text} :user
+        ),
+      })),
 }));
 
 export default useTodoStore;
