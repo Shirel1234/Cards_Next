@@ -39,7 +39,7 @@ const Portfolio = () => {
                 
             </div>
             <div className='flex justify-center h-[62px] items-center bg-black'>
-                <p className='text-white'> Contect</p>
+                <p className='text-white'> Contact</p>
             </div>
 
         </div>

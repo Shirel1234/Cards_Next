@@ -5,7 +5,7 @@ const NevBar = () => {
   const routes = [
     { href: '/pages/home', text: 'Home' },
     { href: '/pages/login', text: 'Login' },
-    { href: '/pages/services', text: 'Services' },
+    { href: '/pages/contact', text: 'Contact' },
     { href: '/pages/postuser', text: 'Users' },
   ];
 
