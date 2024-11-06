@@ -28,7 +28,14 @@ export const getUser = async (newpostid: string) => {
 
 export const postapi=async()=>{
 
-  const response = await fetch(`http/://localhost:3000/api/post`);
+  const response = await fetch(`http://localhost:3000/api/post`);
   const data =await response.json();
   return data;
 };
+
+export const queryapi = async()=>{
+  const response = await fetch(`http://localhost:3000/api/query`);
+  const data =await response.json();
+  if(!response.ok) throw new Error('Network response was not ok');
+  return data;
+}
