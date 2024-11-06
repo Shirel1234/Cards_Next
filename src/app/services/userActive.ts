@@ -25,3 +25,10 @@ export const getUser = async (newpostid: string) => {
     console.error("Error fetching users:", error);
   }
 };
+
+export const postapi=async()=>{
+
+  const response = await fetch(`http/://localhost:3000/api/post`);
+  const data =await response.json();
+  return data;
+};
