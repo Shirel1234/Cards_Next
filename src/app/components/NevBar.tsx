@@ -6,7 +6,7 @@ const NevBar = () => {
     { href: '/pages/home', text: 'Home' },
     { href: '/pages/login', text: 'Login' },
     { href: '/pages/contact', text: 'Contact' },
-    { href: '/pages/reactQuery/query', text: 'Todo' },
+    { href: '/pages/reactQuery/query', text: 'Add User' },
     { href: '/pages/postuser', text: 'Users' },
   ];
 

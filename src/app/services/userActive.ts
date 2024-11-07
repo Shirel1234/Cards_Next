@@ -34,8 +34,22 @@ export const postapi=async()=>{
 };
 
 export const queryapi = async()=>{
-  const response = await fetch(`http://localhost:3000/api/query`);
+  const response = await fetch(`https://dummyjson.com/users`);
   const data =await response.json();
   if(!response.ok) throw new Error('Network response was not ok');
   return data;
 }
+
+export const createUser=async(user:{username: string; email:string; password:string})=>{
+  try{
+    const response = await axios.post('/api/mongoRoute', user);
+    const data = response.data;
+    console.log('User created:', data);
+    return data;
+  }catch(error){
+    console.error('Error creating user:', error);
+  }
+}
+ 
+
+
