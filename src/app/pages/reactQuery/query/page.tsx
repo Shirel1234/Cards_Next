@@ -12,32 +12,33 @@ const Page = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // Request query
   // const { data, isLoading, error } = useQuery({
   //   queryKey: ['users'],
   //   queryFn: getUsers
   // });
 
-  const handleAddUser=()=>{
-    
-  const newUser: IUser={
-    username: username,
-    email: email,
-    password: password,
-  }
-  console.log("ihbi hu h "+ newUser.username)
+  const handleAddUser = () => {
+
+    const newUser: IUser = {
+      username: username,
+      email: email,
+      password: password,
+    }
+    console.log("ihbi hu h " + newUser.username)
     createUser(newUser);
   }
 
-
+  // Request query
   // const users: IUser[] = data;
   // if (isLoading) return <LoadingSpinner />;
   // if (error instanceof Error) return <div>Error: {error.message}</div>
 
   return (
     <div className='flex flex-col'>
-       <div className='w-[300px] h-[300px] flex flex-col items-center gap-5 bg-gray-300'>
-       <h1 className='text-2xl font-bold mb-4'>Add a new user</h1>
-        <input 
+      <div className='w-[300px] h-[300px] flex flex-col items-center gap-5 bg-gray-300'>
+        <h1 className='text-2xl font-bold mb-4'>Add a new user</h1>
+        <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -62,13 +63,6 @@ const Page = () => {
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
         >Add User</button>
       </div>
-      {/* <ul>
-        {users.map(((user, index) => (
-          <User key={index} user={user} />
-        )))}
-      </ul> */}
-     
-
     </div>
   )
 }
